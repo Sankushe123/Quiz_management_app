@@ -1,34 +1,59 @@
-Project Overview
-The Quiz Management System is a full-stack web application designed to help admins create quizzes and users to attempt them online. The platform provides a smooth and user-friendly experience with features such as quiz creation, question management, online quiz attempts, automated score calculation, and detailed result tracking. The system ensures fast performance, a responsive UI, and secure data handling using modern web technologies.
+🎯 Quiz Management System
 
-Technologies Used
-1. Frontend
-Next.js 16 (App Router) – For building fast, scalable
+A full-stack web application that allows admins to create quizzes and users to attempt them online. The system includes quiz creation, question management, automated scoring, response tracking, and result visualization — built using modern web technologies for speed, scalability, and security.
+
+🚀 Project Overview
+
+The Quiz Management System is designed to simplify the process of creating, managing, and attempting quizzes.
+It provides:
+
+✔️ Admin dashboard for creating quizzes
+
+✔️ MCQ & True/False question support
+
+✔️ Real-time quiz attempt interface
+
+✔️ Automatic score calculation
+
+✔️ User attempt history & detailed results
+
+✔️ Fully responsive UI
+
+✔️ Smooth and fast performance
+
+The platform ensures secure data handling and seamless interaction between frontend and backend services.
+
+🛠️ Technologies Used
+Frontend
+
+Next.js 16 (App Router) – High-performance, scalable framework for frontend.
 
 React.js – Component-based UI development.
 
-Tailwind CSS – Modern utility-first CSS for responsive design.
+Tailwind CSS – Utility-first styling for fast and responsive UI.
 
-Flowbite UI Components – Pre-built components such as buttons, modals, and tables.
+Flowbite UI – Pre-built UI components (buttons, modals, tables, etc.).
 
-Axios – For making API requests.
+Axios – API communication & HTTP requests.
 
-JavaScript (ES6+) – Core scripting for interactivity.
+JavaScript (ES6+) – Client-side logic and interactivity.
 
-2. Backend
-Node.js – Runtime environment for server-side logic.
+Backend
 
-Express.js – Framework for building RESTful backend APIs.
+Node.js – Server-side JavaScript runtime.
 
-MongoDB + Mongoose – NoSQL database used for storing quizzes, questions, answers, and user attempts.
+Express.js – For creating RESTful APIs.
 
-3. Deployment & Tools
-Netlify – Frontend deployment with continuous integration.
+MongoDB + Mongoose – NoSQL database for quizzes, questions, responses, and results.
 
-Render.com – Backend API deployment with auto-scaling.
+Deployment & Tools
 
-Git & GitHub – Version control and project management.
+Netlify – Frontend hosting with CI/CD.
 
-Postman – API testing and debugging.
+Render.com – Backend API deployment with autoscaling.
+
+Git & GitHub – Version control and project collaboration.
+
+Postman – API testing & debugging.
 
 VS Code – Development environment.
