@@ -84,8 +84,8 @@ const AttemptQuiz = ({ quizId }) => {
     // Show Result page
     const handleShowResult = () => {
         router.push(`/quiz/quiz-result?answers=${encodeURIComponent(
-                JSON.stringify(answers)
-            )}&quiz=${encodeURIComponent(JSON.stringify(quiz))}`
+            JSON.stringify(answers)
+        )}&quiz=${encodeURIComponent(JSON.stringify(quiz))}`
         );
     };
 
@@ -173,15 +173,40 @@ const AttemptQuiz = ({ quizId }) => {
                                 <button
                                     key={idx}
                                     onClick={() => handleAnswer(opt)}
-                                    className={`w-full text-left px-4 py-2 rounded border mb-2 ${
-                                        answers[currentQuestion] === opt
+                                    className={`w-full text-left px-4 py-2 rounded border mb-2 ${answers[currentQuestion] === opt
                                             ? "bg-blue-500 text-white"
                                             : "bg-white hover:bg-gray-100"
-                                    }`}
+                                        }`}
                                 >
                                     {opt}
                                 </button>
                             ))}
+
+                        {/* TRUE / FALSE QUESTIONS */}
+                        {currentQ.questionType === "true_false" && (
+                            <>
+                                <button
+                                    onClick={() => handleAnswer("True")}
+                                    className={`w-full text-left px-4 py-2 rounded border mb-2 ${answers[currentQuestion] === "True"
+                                            ? "bg-blue-500 text-white"
+                                            : "bg-white hover:bg-gray-100"
+                                        }`}
+                                >
+                                    True
+                                </button>
+
+                                <button
+                                    onClick={() => handleAnswer("False")}
+                                    className={`w-full text-left px-4 py-2 rounded border mb-2 ${answers[currentQuestion] === "False"
+                                            ? "bg-blue-500 text-white"
+                                            : "bg-white hover:bg-gray-100"
+                                        }`}
+                                >
+                                    False
+                                </button>
+                            </>
+                        )}
+
                     </div>
 
                     <div className="flex justify-between">
@@ -229,13 +254,12 @@ const AttemptQuiz = ({ quizId }) => {
                             <button
                                 key={idx}
                                 onClick={() => setCurrentQuestion(idx)}
-                                className={`px-2 py-1 rounded ${
-                                    currentQuestion === idx
+                                className={`px-2 py-1 rounded ${currentQuestion === idx
                                         ? "bg-blue-500 text-white"
                                         : answers[idx]
-                                        ? "bg-green-300"
-                                        : "bg-gray-200"
-                                }`}
+                                            ? "bg-green-300"
+                                            : "bg-gray-200"
+                                    }`}
                             >
                                 {idx + 1}
                             </button>
